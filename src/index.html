@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nebula GX</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="toolbar">
+        <div class="toolbar-left">
+          <button class="nav-button no-drag" data-action="back" title="Retour">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M11.5 4.5 6 10l5.5 5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="nav-button no-drag" data-action="forward" title="Avancer">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8.5 4.5 5.5 5.5-5.5 5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="nav-button no-drag" data-action="reload" title="Recharger">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.5 6.5V3h-3" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 10a6 6 0 1 1-2-4.47" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <form id="address-form" class="address-bar no-drag">
+          <span class="address-icon" aria-hidden="true">
+            <svg viewBox="0 0 20 20"><path d="M12.88 12.88a4.5 4.5 0 1 0-6.36-6.36 4.5 4.5 0 0 0 6.36 6.36ZM14.5 14.5 12.88 12.88" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <input type="text" id="address-input" placeholder="Rechercher ou entrer une URL" autocomplete="off" />
+          <button type="submit" class="go-button" title="Aller">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4.5 15.5 11-5.5-11-5.5v4.5l6.5 1-6.5 1z" fill="currentColor"/></svg>
+          </button>
+        </form>
+        <div class="toolbar-spacer"></div>
+        <div class="toolbar-right">
+          <button class="nav-button no-drag" data-action="home" title="Accueil">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 8.5 10 3l5.5 5.5V16a1 1 0 0 1-1 1h-9a1 1 0 0 1-1-1z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M8 17v-4h4v4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </button>
+          <div class="window-controls no-drag">
+            <button class="window-button" data-window="minimize" title="Réduire">&#8211;</button>
+            <button class="window-button" data-window="maximize" title="Agrandir">&#9723;</button>
+            <button class="window-button close" data-window="close" title="Fermer">&#10005;</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="app-body">
+        <aside class="sidebar no-drag">
+          <div class="sidebar-group">
+            <button class="sidebar-button" data-url="https://www.perplexity.ai">
+              <span class="icon">🜂</span>
+              <span>Perplexity</span>
+            </button>
+            <button class="sidebar-button" data-url="https://chat.openai.com">
+              <span class="icon">🤖</span>
+              <span>ChatGPT</span>
+            </button>
+            <button class="sidebar-button" data-url="https://discord.com/app">
+              <span class="icon">💬</span>
+              <span>Discord</span>
+            </button>
+            <button class="sidebar-button" data-url="https://music.youtube.com">
+              <span class="icon">🎵</span>
+              <span>YT Music</span>
+            </button>
+          </div>
+          <div class="sidebar-group">
+            <button class="sidebar-button" data-url="https://www.netflix.com">
+              <span class="icon">🎬</span>
+              <span>Netflix</span>
+            </button>
+            <button class="sidebar-button" data-url="https://store.steampowered.com">
+              <span class="icon">🎮</span>
+              <span>Steam</span>
+            </button>
+            <button class="sidebar-button" data-url="https://www.reddit.com">
+              <span class="icon">🛰️</span>
+              <span>Reddit</span>
+            </button>
+            <button class="sidebar-button" data-url="https://www.spotify.com">
+              <span class="icon">🎧</span>
+              <span>Spotify</span>
+            </button>
+          </div>
+        </aside>
+
+        <main class="browser-area">
+          <section id="home-screen" class="home-screen">
+            <div class="hero-card">
+              <div class="hero-content">
+                <span class="badge">Nebula GX</span>
+                <h1>Explore le web avec un style futuriste</h1>
+                <p>Des raccourcis personnalisés, un thème néon et une expérience de navigation fluide inspirée des navigateurs gamers.</p>
+                <div class="hero-actions">
+                  <button class="primary" data-url="https://www.google.com">Lancer Google</button>
+                  <button class="ghost" data-url="https://www.youtube.com">Ouvrir YouTube</button>
+                </div>
+              </div>
+              <div class="hero-visual">
+                <div class="orbital"></div>
+                <div class="orbital slow"></div>
+                <div class="glow"></div>
+              </div>
+            </div>
+
+            <div class="widget-grid">
+              <article class="widget">
+                <header>
+                  <h2>Raccourcis favoris</h2>
+                  <span class="accent">Toujours accessibles</span>
+                </header>
+                <div class="quick-links">
+                  <button data-url="https://mail.google.com">Gmail</button>
+                  <button data-url="https://www.amazon.fr">Amazon</button>
+                  <button data-url="https://www.twitch.tv">Twitch</button>
+                  <button data-url="https://www.xbox.com">Xbox</button>
+                  <button data-url="https://www.apple.com">Apple</button>
+                  <button data-url="https://www.canva.com">Canva</button>
+                </div>
+              </article>
+
+              <article class="widget">
+                <header>
+                  <h2>Explorer</h2>
+                  <span class="accent">Tendances du moment</span>
+                </header>
+                <ul class="trend-list">
+                  <li data-url="https://www.theverge.com" tabindex="0">Innovation Tech &amp; IA</li>
+                  <li data-url="https://www.ign.com" tabindex="0">Culture gaming &amp; eSport</li>
+                  <li data-url="https://www.behance.net" tabindex="0">Design futuriste &amp; UI</li>
+                  <li data-url="https://open.spotify.com/playlist/37i9dQZF1DX0XUsuxWHRQd" tabindex="0">Playlists synthwave</li>
+                </ul>
+              </article>
+
+              <article class="widget focus">
+                <header>
+                  <h2>Mode Focus</h2>
+                  <span class="accent">Session productive</span>
+                </header>
+                <p>Simplifie ta navigation en épinglant les sites essentiels et en réduisant les distractions pour rester concentré.</p>
+                <div class="focus-actions">
+                  <button class="primary" data-url="https://notion.so">Ouvrir Notion</button>
+                  <button class="ghost" data-url="https://calendar.google.com">Accéder au calendrier</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <webview id="browser-view" src="" allowpopups></webview>
+        </main>
+      </div>
+    </div>
+    <script defer src="renderer.js"></script>
+  </body>
+</html>
